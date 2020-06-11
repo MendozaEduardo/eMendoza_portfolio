@@ -5,7 +5,7 @@ import edsAutos from "../assets/images/edsAutos.png";
 import laptop from "../assets/images/laptop.jpg";
 import storybookDoc from "../assets/images/storybookDoc.png";
 
-import {Card} from "../components";
+import { Card } from "../components";
 
 export class Carousel extends React.Component {
   constructor(props) {
