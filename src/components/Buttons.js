@@ -145,6 +145,7 @@ const Button = styled.button`
 export const PrimaryButton = styled(Button)`
   background-color: ${(props) => props.theme.primaryColor};
   border: none;
+  margin-right: 30px;
   color: ${(props) => props.theme.textColorOnPrimary};
 
   &:disabled {

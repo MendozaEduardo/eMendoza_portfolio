@@ -1,11 +1,11 @@
 import React from "react";
-import {CardInfo} from "../components";
+import { CardInfo } from "../components";
 
-export const Card = (props) => {
+export const Card = props => {
   return (
     <div
       className="d-inline-block e-card"
-      onClick={(e) => props.click(props.item)}
+      onClick={e => props.click(props.item)}
     >
       <img
         className="e-card-image"
