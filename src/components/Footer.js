@@ -1,9 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
+
+const FooterWrapper = styled.footer`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const Footer = () => {
   return (
-    <footer className="fixed-bottom pt-5 mt-5">
+    <FooterWrapper>
       <Container fluid={true}>
         <Row className="border-top justify-content-between p-3">
           <Col className="p-0" md={3} sm={12}>
@@ -14,6 +20,6 @@ export const Footer = () => {
           </Col>
         </Row>
       </Container>
-    </footer>
+    </FooterWrapper>
   );
 };

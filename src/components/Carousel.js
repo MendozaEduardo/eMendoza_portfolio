@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 
-import edsAutos from "../assets/images/EdsAutos.png";
+import edsAutos from "../assets/images/edsAutos.png";
 import githubMark from "../assets/images/githubMark.png";
 import storybookDoc from "../assets/images/storybookDoc.png";
 

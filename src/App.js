@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import "./App.css";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
-import { PrimaryButton, Footer } from "../src/components";
-import { HomePage, AboutPage } from "../src/pages";
-import { defaultTheme, purpleTheme } from "../src/utilities";
+import { PrimaryButton } from "../src/components";
+import { HomePage } from "../src/pages";
+import { defaultTheme, purpleTheme, typeScale } from "../src/utilities";
 
-// 'ContactPage' will be added at a later time
+// 'About' and 'ContactPage' will be added at a later time
 
 const App = () => {
   const [usePurpleTheme, setUsePurpleTheme] = useState(false);
+  const NavHeader = styled.h4`
+    font-family: "Roboto Slab", monospace;
+    font-size: ${typeScale.header4};
+    color: ${(props) => props.theme.textOnFormElementBackground};
+  `;
   const [state] = useState({
     title: "Eduardo Mendoza, Front-End Developer",
     headerLinks: [
@@ -40,20 +45,20 @@ const App = () => {
               : purpleTheme.primaryColor,
           }}
         >
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
+          <Navbar className="border-bottom mb-5" bg="transparent" expand="lg">
             <PrimaryButton onClick={() => setUsePurpleTheme(!usePurpleTheme)}>
               Change Theme
             </PrimaryButton>
-            <Navbar.Brand>{state.title}</Navbar.Brand>
+            <NavHeader>{state.title}</NavHeader>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/">
+                {/* <Link className="nav-link" to="/">
                   Home
-                </Link>
-                <Link className="nav-link" to="/about">
+                </Link> */}
+                {/* <Link className="nav-link" to="/about">
                   About
-                </Link>
+                </Link> */}
                 {/* <Link className="nav-link" to="/contact">Contact</Link> */}
               </Nav>
             </Navbar.Collapse>
@@ -68,16 +73,16 @@ const App = () => {
               />
             )}
           />
-          <Route
+          {/* <Route
             path="/about"
-            render={() => <AboutPage title={state.about.title} />}
-          />
+             render={() => <AboutPage title={state.about.title} />}
+          /> */}
           {/* <Route
             path="/contact"
             render={() => <ContactPage title={this.state.contact.title} />}
           /> */}
         </Container>
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </Router>
   );
