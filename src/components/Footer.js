@@ -5,8 +5,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { typeScale } from "../utilities";
 
 const FooterWrapper = styled.footer`
-  display: flex;
-  flex-direction: column;
   font-family: "Roboto Slab", monospace;
   font-size: ${typeScale.h5};
   color: ${props => props.theme.textOnFormElementBackground};
