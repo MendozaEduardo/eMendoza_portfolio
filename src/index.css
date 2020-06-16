@@ -7,8 +7,12 @@ body {
   display: inline-block;
 }
 
+.modal {
+  align-content: center;
+}
+
 .e-card {
-  margin: 80px;
+  margin: 40px;
 }
 
 .e-card-image {

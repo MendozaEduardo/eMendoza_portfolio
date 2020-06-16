@@ -5,7 +5,7 @@ import "./App.css";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
-import { PrimaryButton, Footer } from "../src/components";
+import { PrimaryButton, Footer, Modal } from "../src/components";
 import { HomePage } from "../src/pages";
 import { defaultTheme, purpleTheme, typeScale } from "../src/utilities";
 
@@ -13,11 +13,7 @@ import { defaultTheme, purpleTheme, typeScale } from "../src/utilities";
 
 const App = () => {
   const [usePurpleTheme, setUsePurpleTheme] = useState(false);
-  const NavHeader = styled.h4`
-    font-family: "Roboto Slab", monospace;
-    font-size: ${typeScale.header4};
-    color: ${props => props.theme.textOnFormElementBackground};
-  `;
+  const [showModal, setShowModal] = useState(true);
   const [state] = useState({
     title: "Eduardo Mendoza, Front-End Developer",
     headerLinks: [
@@ -32,6 +28,12 @@ const App = () => {
     about: { title: "About Me" },
     contact: { title: "Let's Talk!" }
   });
+
+  const NavHeader = styled.h4`
+    font-family: "Roboto Slab", monospace;
+    font-size: ${typeScale.header4};
+    color: ${props => props.theme.textOnFormElementBackground};
+  `;
 
   return (
     <Router>
@@ -52,17 +54,18 @@ const App = () => {
             <NavHeader>{state.title}</NavHeader>
             {/* <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" /> */}
             {/* <Navbar.Collapse id="navbar-toggle"> */}
-              <Nav className="ml-auto">
-                {/* <Link className="nav-link" to="/">
+            <Nav className="ml-auto">
+              {/* <Link className="nav-link" to="/">
                   Home
                 </Link> */}
-                {/* <Link className="nav-link" to="/about">
+              {/* <Link className="nav-link" to="/about">
                   About
                 </Link> */}
-                {/* <Link className="nav-link" to="/contact">Contact</Link> */}
-              </Nav>
+              {/* <Link className="nav-link" to="/contact">Contact</Link> */}
+            </Nav>
             {/* </Navbar.Collapse> */}
           </Navbar>
+
           <Route
             path="/"
             exact
@@ -75,12 +78,15 @@ const App = () => {
           />
           {/* <Route
             path="/about"
-             render={() => <AboutPage title={state.about.title} />}
+            render={() => <AboutPage title={state.about.title} />}
           /> */}
           {/* <Route
             path="/contact"
             render={() => <ContactPage title={this.state.contact.title} />}
           /> */}
+          {showModal ? (
+            <Modal showModal={showModal} setShowModal={setShowModal} />
+          ) : null}
           <Footer />
         </Container>
       </ThemeProvider>

@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import styled from "styled-components";
-import { useSpring, animated } from "react-spring";
+
+import { Content, PrimaryButton } from "./";
 import { typeScale } from "../utilities";
 import { Illustrations, CloseIcon } from "../assets";
-import { PrimaryButton } from "./Buttons";
 
 const ModalWrapper = styled.div`
   width: 800px;
   height: 580px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background-color: ${(props) => props.theme.formElementBackground};
-  color: ${(props) => props.theme.textOnFormElementBackground};
+  background-color: ${props => props.theme.formElementBackground};
+  color: ${props => props.theme.textOnFormElementBackground};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,13 +42,24 @@ const CloseModalButton = styled.button`
   padding: 0;
 `;
 
-export const WelcomeModal = ({ showModal, setShowModal }) => {
-  const animation = useSpring({
-    opacity: showModal ? 1 : 0,
-    transform: showModal ? `translateY(0)` : `translateY(-200%)`,
-  });
-  return (
-    <animated.div style={animation}>
+const modalRoot = document.getElementById("modal");
+
+export const Modal = props => {
+  const { showModal, setShowModal } = props;
+
+  const elRef = useRef(null);
+  if (!elRef.current) {
+    const div = document.createElement("div");
+    elRef.current = div;
+  }
+
+  useEffect(() => {
+    modalRoot.appendChild(elRef.current);
+    return () => modalRoot.removeChild(elRef.current);
+  }, []);
+
+  return createPortal(
+    <Content>
       <ModalWrapper>
         <img
           src={Illustrations.Welcome}
@@ -59,11 +71,20 @@ export const WelcomeModal = ({ showModal, setShowModal }) => {
           I made this site with the intent to introduce myself, as well as
           showcase my front-end development skills.
         </WelcomeText>
-        <PrimaryButton>I'm in, show me what you've got!</PrimaryButton>
-        <CloseModalButton aria-label="Close modal">
+        <PrimaryButton
+          onClick={() => setShowModal(!showModal)}
+          aria-label="Close modal"
+        >
+          I'm in, show me what you've got!
+        </PrimaryButton>
+        <CloseModalButton
+          onClick={() => setShowModal(!showModal)}
+          aria-label="Close modal"
+        >
           <CloseIcon />
         </CloseModalButton>
       </ModalWrapper>
-    </animated.div>
+    </Content>,
+    elRef.current
   );
 };
