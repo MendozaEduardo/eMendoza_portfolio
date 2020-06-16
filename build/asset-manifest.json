@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.84ebd698.chunk.css",
+    "main.js": "/static/js/main.5565e264.chunk.js",
+    "main.js.map": "/static/js/main.5565e264.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e682fb38.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e682fb38.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.72a3a546.chunk.js": "/static/js/2.72a3a546.chunk.js",
+    "static/js/2.72a3a546.chunk.js.map": "/static/js/2.72a3a546.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f820cf77229c97c41a9a538e741cf121.js": "/precache-manifest.f820cf77229c97c41a9a538e741cf121.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.84ebd698.chunk.css.map": "/static/css/main.84ebd698.chunk.css.map",
+    "static/js/2.72a3a546.chunk.js.LICENSE.txt": "/static/js/2.72a3a546.chunk.js.LICENSE.txt",
+    "static/media/edsAutos.png": "/static/media/edsAutos.67a15851.png",
+    "static/media/githubMark.png": "/static/media/githubMark.e409fcbd.png",
+    "static/media/storybookDoc.png": "/static/media/storybookDoc.a7980f9f.png",
+    "static/media/welcome-modal.svg": "/static/media/welcome-modal.e70969ca.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e682fb38.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.72a3a546.chunk.js",
+    "static/css/main.84ebd698.chunk.css",
+    "static/js/main.5565e264.chunk.js"
+  ]
+}
