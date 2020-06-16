@@ -5,7 +5,7 @@ import "./App.css";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
-import { PrimaryButton } from "../src/components";
+import { PrimaryButton, Footer } from "../src/components";
 import { HomePage } from "../src/pages";
 import { defaultTheme, purpleTheme, typeScale } from "../src/utilities";
 
@@ -16,21 +16,21 @@ const App = () => {
   const NavHeader = styled.h4`
     font-family: "Roboto Slab", monospace;
     font-size: ${typeScale.header4};
-    color: ${(props) => props.theme.textOnFormElementBackground};
+    color: ${props => props.theme.textOnFormElementBackground};
   `;
   const [state] = useState({
     title: "Eduardo Mendoza, Front-End Developer",
     headerLinks: [
-      { title: "Home", path: "/" },
-      { title: "About", path: "/about" },
+      { title: "Home", path: "/" }
+      // { title: "About", path: "/about" },
       // { title: "Contact", path: "/contact" },
     ],
     home: {
       title: "Welcome To My Site",
-      subTitle: "Check out my projects!",
+      subTitle: "Check out my projects!"
     },
     about: { title: "About Me" },
-    contact: { title: "Let's Talk!" },
+    contact: { title: "Let's Talk!" }
   });
 
   return (
@@ -42,7 +42,7 @@ const App = () => {
           style={{
             background: usePurpleTheme
               ? defaultTheme.primaryColor
-              : purpleTheme.primaryColor,
+              : purpleTheme.primaryColor
           }}
         >
           <Navbar className="border-bottom mb-5" bg="transparent" expand="lg">
@@ -50,8 +50,8 @@ const App = () => {
               Change Theme
             </PrimaryButton>
             <NavHeader>{state.title}</NavHeader>
-            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
-            <Navbar.Collapse id="navbar-toggle">
+            {/* <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" /> */}
+            {/* <Navbar.Collapse id="navbar-toggle"> */}
               <Nav className="ml-auto">
                 {/* <Link className="nav-link" to="/">
                   Home
@@ -61,7 +61,7 @@ const App = () => {
                 </Link> */}
                 {/* <Link className="nav-link" to="/contact">Contact</Link> */}
               </Nav>
-            </Navbar.Collapse>
+            {/* </Navbar.Collapse> */}
           </Navbar>
           <Route
             path="/"
@@ -81,8 +81,8 @@ const App = () => {
             path="/contact"
             render={() => <ContactPage title={this.state.contact.title} />}
           /> */}
+          <Footer />
         </Container>
-        {/* <Footer /> */}
       </ThemeProvider>
     </Router>
   );

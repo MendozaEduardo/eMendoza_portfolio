@@ -2,16 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import { typeScale } from "../utilities";
-import { Carousel, Hero } from "../components";
+import { Carousel, Content } from "../components";
 
 const Welcome = styled.div`
   font-family: "Roboto Slab", monospace;
   color: ${props => props.theme.textOnFormElementBackground};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 `;
 
 const Header = styled.h1`
@@ -24,12 +19,12 @@ const Subtitle = styled.h3`
 `;
 export const HomePage = props => {
   return (
-    <div>
-      <Welcome>
+    <Welcome>
+      <Content>
         <Header>{props.title}</Header>
         <Subtitle>{props.subTitle}</Subtitle>
-      <Carousel />
-      </Welcome>
-    </div>
+        <Carousel />
+      </Content>
+    </Welcome>
   );
 };
