@@ -7,6 +7,16 @@ import { typeScale } from "../utilities";
 import { Illustrations, CloseIcon } from "../assets";
 
 const ModalWrapper = styled.div`
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 800px;
   height: 580px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
