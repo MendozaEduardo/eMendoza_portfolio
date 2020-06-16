@@ -41,7 +41,6 @@ export class Carousel extends React.Component {
   }
 
   handleCardClick = id => {
-    console.log(id);
 
     let items = [...this.state.items];
 
