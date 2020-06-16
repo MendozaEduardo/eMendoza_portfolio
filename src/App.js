@@ -50,8 +50,8 @@ const App = () => {
               Change Theme
             </PrimaryButton>
             <NavHeader>{state.title}</NavHeader>
-            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
-            <Navbar.Collapse id="navbar-toggle">
+            {/* <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" /> */}
+            {/* <Navbar.Collapse id="navbar-toggle"> */}
               <Nav className="ml-auto">
                 {/* <Link className="nav-link" to="/">
                   Home
@@ -61,7 +61,7 @@ const App = () => {
                 </Link> */}
                 {/* <Link className="nav-link" to="/contact">Contact</Link> */}
               </Nav>
-            </Navbar.Collapse>
+            {/* </Navbar.Collapse> */}
           </Navbar>
           <Route
             path="/"
