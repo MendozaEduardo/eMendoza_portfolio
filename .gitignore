@@ -2,6 +2,11 @@
 ###################
 *.env
 
+# Node files/folders #
+##############
+*package-lock.json
+*node_modules
+
 # Compiled source #
 ###################
 *.com

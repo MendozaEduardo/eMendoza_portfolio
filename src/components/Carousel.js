@@ -23,7 +23,7 @@ export class Carousel extends React.Component {
         {
           id: 1,
           title: "My GitHub Page",
-          subTitle: "Check out my projects",
+          subTitle: "Check out my code",
           imgSrc: githubMark,
           link: "https://github.com/MendozaEduardo",
           selected: false
@@ -31,7 +31,7 @@ export class Carousel extends React.Component {
         {
           id: 2,
           title: "Storybook Documentation",
-          subTitle: "Check out the storybook documentation for this site",
+          subTitle: "Check out the storybook docs for my site",
           imgSrc: storybookDoc,
           link: "https://eds-style-guide.netlify.app",
           selected: false
