@@ -47,7 +47,7 @@ const App = () => {
               : purpleTheme.primaryColor
           }}
         >
-          <Navbar className="border-bottom mb-5" bg="transparent" expand="lg">
+          <Navbar className="border-bottom mb-5" bg="transparent">
             <PrimaryButton onClick={() => setUsePurpleTheme(!usePurpleTheme)}>
               Change Theme
             </PrimaryButton>

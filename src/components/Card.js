@@ -4,7 +4,7 @@ import { CardInfo } from "../components";
 export const Card = props => {
   return (
     <div
-      className="d-inline-block e-card"
+      className="e-card"
       onClick={e => props.click(props.item)}
     >
       <img

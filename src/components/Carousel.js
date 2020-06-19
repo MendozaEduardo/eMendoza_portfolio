@@ -22,7 +22,7 @@ export class Carousel extends React.Component {
         },
         {
           id: 1,
-          title: "My GitHub Page",
+          title: "My GitHub",
           subTitle: "Check out my code",
           imgSrc: githubMark,
           link: "https://github.com/MendozaEduardo",
@@ -30,7 +30,7 @@ export class Carousel extends React.Component {
         },
         {
           id: 2,
-          title: "Storybook Documentation",
+          title: "Storybook",
           subTitle: "Check out the storybook docs for my site",
           imgSrc: storybookDoc,
           link: "https://eds-style-guide.netlify.app",
