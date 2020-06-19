@@ -7,31 +7,27 @@ import { typeScale } from "../utilities";
 import { Illustrations, CloseIcon } from "../assets";
 
 const ModalWrapper = styled.div`
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
   z-index: 10;
-  
-  display: flex;
+
   justify-content: center;
   align-items: center;
-  width: 800px;
-  height: 580px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 110%;
   background-color: ${props => props.theme.formElementBackground};
   color: ${props => props.theme.textOnFormElementBackground};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 2px;
+  border-radius: 3%;
 `;
 
 const WelcomeHeader = styled.h3`
   font-size: ${typeScale.header3};
+  text-align: center;
 `;
 
 const WelcomeText = styled.p`
@@ -71,11 +67,13 @@ export const Modal = props => {
   return createPortal(
     <Content>
       <ModalWrapper>
-        <img
-          src={Illustrations.Welcome}
-          alt="Site welcome"
-          aria-hidden="true"
-        />
+        <picture>
+          <img
+            src={Illustrations.Welcome}
+            alt="Site welcome"
+            aria-hidden="true"
+          />
+        </picture>
         <WelcomeHeader>Hey there, welcome to my site!</WelcomeHeader>
         <WelcomeText>
           I made this site with the intent to introduce myself, as well as
