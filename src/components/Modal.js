@@ -2,50 +2,50 @@ import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 
-import { Content, PrimaryButton } from "./";
-import { typeScale } from "../utilities";
-import { Illustrations, CloseIcon } from "../assets";
+import { PrimaryButton } from "./";
+import { typeScale, device } from "../utilities";
+import { Illustrations } from "../assets";
 
 const ModalWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 10;
-
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 110%;
+  margin: auto;
   background-color: ${props => props.theme.formElementBackground};
   color: ${props => props.theme.textOnFormElementBackground};
+  padding: 5%;
   border-radius: 3%;
+  max-width: 1100px;
+  max-height: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media ${device.laptopL} {
+    min-width: 1000px;
+    min-height: 1000px;
+  }
+
+  @media ${device.laptop} {
+    min-width: 600px;
+    min-height: 600px;
+  }
+
+  @media ${device.mobileS} {
+    min-width: 300px;
+    min-height: 300px;
+  }
 `;
 
 const WelcomeHeader = styled.h3`
-  font-size: ${typeScale.header3};
   text-align: center;
+  font-weight: bold;
+  font-size: ${typeScale.header1};
 `;
 
 const WelcomeText = styled.p`
-  font-size: ${typeScale.paragraph};
-  max-width: 70%;
   text-align: center;
-`;
-
-const CloseModalButton = styled.button`
-  cursor: pointer;
-  background: none;
-  border: none;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 24px;
-  height: 24px;
-  padding: 0;
+  max-width: 80%;
+  font-size: ${typeScale.header3};
 `;
 
 const modalRoot = document.getElementById("modal");
@@ -65,34 +65,24 @@ export const Modal = props => {
   }, []);
 
   return createPortal(
-    <Content>
-      <ModalWrapper>
-        <picture>
-          <img
-            src={Illustrations.Welcome}
-            alt="Site welcome"
-            aria-hidden="true"
-          />
-        </picture>
-        <WelcomeHeader>Hey there, welcome to my site!</WelcomeHeader>
-        <WelcomeText>
-          I made this site with the intent to introduce myself, as well as
-          showcase my front-end development skills.
-        </WelcomeText>
-        <PrimaryButton
-          onClick={() => setShowModal(!showModal)}
-          aria-label="Close modal"
-        >
-          I'm in, show me what you've got!
-        </PrimaryButton>
-        <CloseModalButton
-          onClick={() => setShowModal(!showModal)}
-          aria-label="Close modal"
-        >
-          <CloseIcon />
-        </CloseModalButton>
-      </ModalWrapper>
-    </Content>,
+    <ModalWrapper>
+      <picture>
+        <source media={device.laptopL} srcSet={Illustrations.edLg} />
+        <source media={device.tablet} srcSet={Illustrations.edMd} />
+        <img src={Illustrations.edSm} alt="Site welcome" />
+      </picture>
+      <WelcomeHeader>Hey there, welcome to my site!</WelcomeHeader>
+      <WelcomeText>
+        I made this site with the intent to introduce myself, as well as
+        showcase my front-end development skills.
+      </WelcomeText>
+      <PrimaryButton
+        onClick={() => setShowModal(!showModal)}
+        aria-label="Close modal"
+      >
+        Show me what you've got!
+      </PrimaryButton>
+    </ModalWrapper>,
     elRef.current
   );
 };

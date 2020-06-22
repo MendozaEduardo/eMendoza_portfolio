@@ -51,7 +51,7 @@ const App = () => {
             <PrimaryButton onClick={() => setUsePurpleTheme(!usePurpleTheme)}>
               Change Theme
             </PrimaryButton>
-            <NavHeader>{state.title}</NavHeader>
+            <NavHeader className="ml-5">{state.title}</NavHeader>
             {/* <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" /> */}
             {/* <Navbar.Collapse id="navbar-toggle"> */}
             <Nav className="ml-auto">
@@ -84,11 +84,11 @@ const App = () => {
             path="/contact"
             render={() => <ContactPage title={this.state.contact.title} />}
           /> */}
-          {showModal ? (
-            <Modal showModal={showModal} setShowModal={setShowModal} />
-          ) : null}
           <Footer />
         </Container>
+        {showModal ? (
+          <Modal showModal={showModal} setShowModal={setShowModal} />
+        ) : null}
       </ThemeProvider>
     </Router>
   );

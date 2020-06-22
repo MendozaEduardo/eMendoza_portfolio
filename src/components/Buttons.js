@@ -120,7 +120,7 @@ const Button = styled.button`
   padding: 12px 24px;
   font-size: ${typeScale.paragraph};
   border-radius: 5px;
-  min-width: 100px;
+  min-width: 80px;
   cursor: pointer;
   font-family: "Roboto Slab", monospace;
   transition: background-color 0.2s linear, color 0.2s linear;
@@ -145,7 +145,6 @@ const Button = styled.button`
 export const PrimaryButton = styled(Button)`
   background-color: ${props => props.theme.primaryColor};
   border: none;
-  margin-right: 30px;
   color: ${props => props.theme.textColorOnPrimary};
 
   &:disabled {
