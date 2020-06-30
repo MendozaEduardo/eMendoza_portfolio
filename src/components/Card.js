@@ -1,12 +1,10 @@
 import React from "react";
+
 import { CardInfo } from "../components";
 
 export const Card = props => {
   return (
-    <div
-      className="e-card"
-      onClick={e => props.click(props.item)}
-    >
+    <div onClick={e => props.click(props.item)}>
       <img
         className="e-card-image"
         src={props.item.imgSrc}

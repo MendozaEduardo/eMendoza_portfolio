@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import Modal from "react-bootstrap/Modal";
+
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 
@@ -57,7 +59,7 @@ const WelcomeText = styled.p`
   max-width: 80%;
 
   @media ${device.laptop} {
-    font-size: ${typeScale.header2}
+    font-size: ${typeScale.header2};
   }
 
   @media ${device.tablet} {
@@ -71,7 +73,7 @@ const WelcomeText = styled.p`
 
 const modalRoot = document.getElementById("modal");
 
-export const Modal = props => {
+export const ModalComponent = props => {
   const { showModal, setShowModal } = props;
 
   const elRef = useRef(null);
@@ -86,7 +88,7 @@ export const Modal = props => {
   }, []);
 
   return createPortal(
-    <ModalWrapper>
+    <Modal>
       <picture>
         <source media={device.laptopL} srcSet={Illustrations.edLg} />
         <source media={device.tablet} srcSet={Illustrations.edMd} />
@@ -104,7 +106,7 @@ export const Modal = props => {
       >
         Visit site
       </PrimaryButton>
-    </ModalWrapper>,
+    </Modal>,
     elRef.current
   );
 };

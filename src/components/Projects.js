@@ -1,13 +1,12 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Card } from "../components";
+import Grid from "@material-ui/core/Grid";
 
 import edsAutos from "../assets/images/edsAutos.png";
 import githubMark from "../assets/images/githubMark.png";
 import storybookDoc from "../assets/images/storybookDoc.png";
 
-import { Card } from "../components";
-
-export class Carousel extends React.Component {
+export class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,7 +40,6 @@ export class Carousel extends React.Component {
   }
 
   handleCardClick = id => {
-
     let items = [...this.state.items];
 
     items[id].selected = items[id].selected ? false : true;
@@ -71,11 +69,14 @@ export class Carousel extends React.Component {
 
   render() {
     return (
-      <Container fluid={true}>
-        <Row className="justify-content-around">
+      <Grid container className="my-5" justify="center">
+        <Grid container item className="my-2" sm={12} justify="center">
+          <h1>Check out My Projects</h1>
+        </Grid>
+        <Grid container item lg={12} spacing={3} justify="space-evenly">
           {this.makeItems(this.state.items)}
-        </Row>
-      </Container>
+        </Grid>
+      </Grid>
     );
   }
 }
