@@ -12,93 +12,108 @@ import { Container } from "@material-ui/core";
 
 export function Skills() {
   return (
-    <Container className="skillsContainer" maxWidth="lg">
-      <Grid container direction="row">
-        <Grid item lg={4} md={4} sm={8}>
-          <List aria-label="Technical Skills">
-            <ListItem>
-              <ListItemIcon>
-                <CodeIcon />
-              </ListItemIcon>
-              <ListItemText primary="Programming/Spoken Languages" />
-            </ListItem>
-            <Divider variant="middle" />
-            <ListItem>
-              <ListItemText>JavaScript - includes JSX</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>CSS</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>HTML</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Spanish (Fluent)</ListItemText>
-            </ListItem>
-          </List>
-        </Grid>
-        <Divider />
-
-        <Grid item lg={4} md={4} sm={8}>
-          <List aria-label="Technical Skills">
-            <ListItem>
-              <ListItemIcon>
-                <LibraryBooksIcon />
-              </ListItemIcon>
-              <ListItemText primary="Libraries and Frameworks" />
-            </ListItem>
-            <Divider variant="middle" />
-            <ListItem>
-              <ListItemText>React</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Material-UI</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Bootstrap</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>react-spring</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Semantic UI</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText></ListItemText>
-            </ListItem>
-          </List>
-        </Grid>
-
-        <Grid item lg={4} md={4} sm={8}>
-          <List aria-label="Technical Skills">
-            <ListItem>
-              <ListItemIcon>
-                <BuildIcon />
-              </ListItemIcon>
-              <ListItemText primary="Other Developer Tools" />
-            </ListItem>
-            <Divider variant="middle" />
-            <ListItem>
-              <ListItemText>Node.js</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Figma</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Storybook</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Github/Gitlab</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Codepen</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Passport.js</ListItemText>
-            </ListItem>
-          </List>
+    <React.Fragment>
+      <Grid
+        container
+        className="aboutMeWrapper"
+        direction="column"
+        justify="space-around"
+        alignItems="center"
+      >
+        <Grid item md={4}>
+          <h2>
+            <strong>What's in my Toolbox?</strong>
+          </h2>
         </Grid>
       </Grid>
-    </Container>
+      <Container className="skillsContainer" maxWidth="lg">
+        <Grid container direction="row">
+          <Grid item lg={4} md={4} sm={8}>
+            <List aria-label="Technical Skills">
+              <ListItem>
+                <ListItemIcon>
+                  <CodeIcon />
+                </ListItemIcon>
+                <ListItemText primary="Programming/Spoken Languages" />
+              </ListItem>
+              <Divider variant="middle" />
+              <ListItem>
+                <ListItemText>JavaScript - includes JSX</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>CSS</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>HTML</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Spanish (Fluent)</ListItemText>
+              </ListItem>
+            </List>
+          </Grid>
+          <Divider />
+
+          <Grid item lg={4} md={4} sm={8}>
+            <List aria-label="Technical Skills">
+              <ListItem>
+                <ListItemIcon>
+                  <LibraryBooksIcon />
+                </ListItemIcon>
+                <ListItemText primary="Libraries and Frameworks" />
+              </ListItem>
+              <Divider variant="middle" />
+              <ListItem>
+                <ListItemText>React</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Material-UI</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Bootstrap</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>react-spring</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Semantic UI</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText></ListItemText>
+              </ListItem>
+            </List>
+          </Grid>
+
+          <Grid item lg={4} md={4} sm={8}>
+            <List aria-label="Technical Skills">
+              <ListItem>
+                <ListItemIcon>
+                  <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary="Other Developer Tools" />
+              </ListItem>
+              <Divider variant="middle" />
+              <ListItem>
+                <ListItemText>Node.js</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Figma</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Storybook</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Github/Gitlab</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Codepen</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Passport.js</ListItemText>
+              </ListItem>
+            </List>
+          </Grid>
+        </Grid>
+      </Container>
+    </React.Fragment>
   );
 }
