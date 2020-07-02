@@ -10,17 +10,15 @@ const Home = props => {
     <React.Fragment>
       <CssBaseline />
       <Grid>
-        <Divider variant="middle" className="my-5" />
-
         <AboutMe />
 
         <Skills />
 
-        <Divider variant="middle" className="my-5" />
+        <Divider variant="middle" className="my-4" />
 
         <PhotoGrid />
 
-        <Divider variant="middle" className="my-5" />
+        <Divider variant="middle" className="my-4" />
 
         <Projects />
       </Grid>

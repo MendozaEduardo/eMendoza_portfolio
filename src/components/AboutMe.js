@@ -11,14 +11,14 @@ export const AboutMe = () => {
       alignItems="center"
     >
       <Grid item md={4}>
-        <h1>
-          <strong>About Me</strong>
-        </h1>
         <h2>
-          Hey there, welcome to my site. My name is Eduardo Mendoza and I'm a
-          front-end developer from Austin. I love to code and am continually
-          looking for ways to further develop my skillset.
+          <strong>About Me</strong>
         </h2>
+        <h4>
+          Hey there, my name is Eduardo Mendoza and I'm a front-end developer
+          from Austin. I enjoy coding and am continually looking for ways to
+          develop my skillset.
+        </h4>
       </Grid>
     </Grid>
   );
