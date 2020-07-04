@@ -15,7 +15,7 @@ export const AboutMe = () => {
           <strong>About Me</strong>
         </h2>
         <h4>
-          Hey there, my name is Eduardo Mendoza and I'm a front-end developer
+          Hey there, my name is Eduardo Mendoza and I'm a developer
           from Austin. I enjoy coding and am continually looking for ways to
           develop my skillset.
         </h4>
