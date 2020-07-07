@@ -3,6 +3,7 @@ import { typeScale } from "../utilities";
 import { applyStyleModifiers } from "styled-components-modifiers";
 
 const BUTTON_MODIFIERS = {
+  
   small: () => `
     font-size: ${typeScale.helperText};
     padding: 8px;
@@ -118,11 +119,9 @@ const BUTTON_MODIFIERS = {
 
 const Button = styled.button`
   padding: 12px 24px;
-  font-size: ${typeScale.paragraph};
   border-radius: 5px;
   min-width: 80px;
   cursor: pointer;
-  font-family: "Roboto Slab", monospace;
   transition: background-color 0.2s linear, color 0.2s linear;
 
   &:hover {
@@ -183,3 +182,4 @@ export const TertiaryButton = styled(Button)`
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `;
+

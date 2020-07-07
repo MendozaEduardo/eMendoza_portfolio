@@ -3,23 +3,24 @@ import Grid from "@material-ui/core/Grid";
 
 export const AboutMe = () => {
   return (
-    <Grid
-      container
-      className="aboutMeWrapper"
-      direction="column"
-      justify="space-around"
-      alignItems="center"
-    >
-      <Grid item md={4}>
-        <h2>
-          <strong>About Me</strong>
-        </h2>
-        <h4>
-          Hey there, my name is Eduardo Mendoza and I'm a developer
-          from Austin. I enjoy coding and am continually looking for ways to
-          develop my skillset.
-        </h4>
+    <section>
+      <Grid
+        container
+        className="aboutMeWrapper"
+        direction="column"
+        justify="space-around"
+        alignItems="center"
+      >
+        <Grid item md={4}>
+          <h2>
+            <strong>About Me</strong>
+          </h2>
+          <h4>
+            I'm a developer with both front and back-end development experience from Austin with a
+            passion for building beautiful, responsive web applications.
+          </h4>
+        </Grid>
       </Grid>
-    </Grid>
+    </section>
   );
 };

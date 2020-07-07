@@ -1,30 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
-
-import { NavBar, WelcomeBanner, Footer } from "../src/components";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { heroData } from "./mock/data";
+import { NavBar, Footer, Hero } from "../src/components";
 import Home from "../src/pages/Home";
-import { defaultTheme } from "../src/utilities";
+import { defaultTheme, PortfolioProvider } from "../src/utilities";
 
 const App = () => {
-  const state = {
-    title: "Eduardo Mendoza",
-    home: {
-      title: "Welcome To My Site",
-      subTitle: "Check out my projects!"
-    },
-    about: { title: "About Me" },
-    contact: { title: "Let's Talk!" }
-  };
+  const [hero, setHero] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+  }, []);
 
   return (
-    <React.Fragment>
+    <PortfolioProvider value={{ hero }}>
+      <CssBaseline />
       <ThemeProvider theme={defaultTheme}>
+        <Hero />
         <NavBar />
-        <WelcomeBanner />
-        <Home title={state.title} subTitle={state.home.subTitle} />
+        <Home />
         <Footer />
       </ThemeProvider>
-    </React.Fragment>
+    </PortfolioProvider>
   );
 };
 
