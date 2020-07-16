@@ -8,7 +8,7 @@ body {
 #hero {
   padding: 0;
   margin: 0 auto;
-  background: url("../src/assets/images/background-lg.webp");
+  background: url("../src/assets/images/background-lg.png");
   background-position: center;
   background-size: cover;
   min-height: 100vh;

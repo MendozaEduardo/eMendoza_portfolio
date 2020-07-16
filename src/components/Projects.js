@@ -3,9 +3,9 @@ import { Project } from "../components";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
-import edsAutos from "../assets/images/edsAutos.webp";
-import githubMark from "../assets/images/githubMark.webp";
-import storybookDoc from "../assets/images/storybookDoc.webp";
+import edsAutos from "../assets/images/edsAutos.png";
+import githubMark from "../assets/images/githubMark.png";
+import storybookDoc from "../assets/images/storybookDoc.png";
 
 export class Projects extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export class Projects extends React.Component {
         {
           id: 2,
           title: "Storybook",
-          subTitle: "Check out the storybook docs for my site",
+          subTitle: "Check out this site's storybook",
           imgSrc: storybookDoc,
           link: "https://eds-style-guide.netlify.app",
           selected: false,
