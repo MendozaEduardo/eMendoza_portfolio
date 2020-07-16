@@ -16,7 +16,7 @@ export const AboutMe = () => {
             <strong>About Me</strong>
           </h2>
           <h4>
-            I'm a developer with both front and back-end development experience from Austin with a
+            I'm a developer with both front and back-end experience from Austin with a
             passion for building beautiful, responsive web applications.
           </h4>
         </Grid>

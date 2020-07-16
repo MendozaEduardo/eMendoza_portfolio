@@ -34,11 +34,11 @@ export function Skills() {
                 <ListItemIcon>
                   <CodeIcon />
                 </ListItemIcon>
-                <ListItemText primary="Programming/Spoken Languages" />
+                <ListItemText primary="Programming Languages" />
               </ListItem>
               <Divider variant="middle" />
               <ListItem>
-                <ListItemText>JavaScript - includes JSX</ListItemText>
+                <ListItemText>JavaScript</ListItemText>
               </ListItem>
               <ListItem>
                 <ListItemText>CSS</ListItemText>
@@ -47,7 +47,10 @@ export function Skills() {
                 <ListItemText>HTML</ListItemText>
               </ListItem>
               <ListItem>
-                <ListItemText>Spanish (Fluent)</ListItemText>
+                <ListItemText>TypeScript</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>JSX</ListItemText>
               </ListItem>
             </List>
           </Grid>
@@ -63,7 +66,10 @@ export function Skills() {
               </ListItem>
               <Divider variant="middle" />
               <ListItem>
-                <ListItemText>React</ListItemText>
+                <ListItemText>React.js</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>React Native</ListItemText>
               </ListItem>
               <ListItem>
                 <ListItemText>Material-UI</ListItemText>
@@ -77,23 +83,25 @@ export function Skills() {
               <ListItem>
                 <ListItemText>Semantic UI</ListItemText>
               </ListItem>
-              <ListItem>
-                <ListItemText></ListItemText>
-              </ListItem>
             </List>
           </Grid>
-
           <Grid item lg={4} md={4} sm={8}>
             <List aria-label="Technical Skills">
               <ListItem>
                 <ListItemIcon>
                   <BuildIcon />
                 </ListItemIcon>
-                <ListItemText primary="Other Developer Tools" />
+                <ListItemText primary="Other Development Tools" />
               </ListItem>
               <Divider variant="middle" />
               <ListItem>
                 <ListItemText>Node.js</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Express.js</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>MongoDB</ListItemText>
               </ListItem>
               <ListItem>
                 <ListItemText>Figma</ListItemText>
@@ -103,12 +111,6 @@ export function Skills() {
               </ListItem>
               <ListItem>
                 <ListItemText>Github/Gitlab</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Codepen</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Passport.js</ListItemText>
               </ListItem>
             </List>
           </Grid>
