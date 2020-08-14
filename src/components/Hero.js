@@ -1,14 +1,13 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-scroll";
 
-import { PortfolioContext } from "../utilities/context";
+import strings from "../utilities/strings";
 import { PrimaryButton } from "../components/Buttons";
 
 export const Hero = () => {
-  const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
+  const { title, name, subtitle, cta } = strings.hero;
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 

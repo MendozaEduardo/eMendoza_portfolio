@@ -1,7 +1,10 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 
+import strings from "../utilities/strings";
+
 export const AboutMe = () => {
+  const { title, subtitle } = strings.aboutMe;
   return (
     <section>
       <Grid
@@ -13,12 +16,9 @@ export const AboutMe = () => {
       >
         <Grid item md={4}>
           <h2>
-            <strong>About Me</strong>
+            <strong>{title}</strong>
           </h2>
-          <h4>
-            I'm a developer with both front and back-end experience from Austin with a
-            passion for building beautiful, responsive web applications.
-          </h4>
+          <h4>{subtitle}</h4>
         </Grid>
       </Grid>
     </section>

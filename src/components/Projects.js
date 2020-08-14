@@ -3,86 +3,44 @@ import { Project } from "../components";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
-import edsAutos from "../assets/images/edsAutos.png";
-import githubMark from "../assets/images/githubMark.png";
-import storybookDoc from "../assets/images/storybookDoc.png";
+import strings from "../utilities/strings";
 
-export class Projects extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [
-        {
-          id: 0,
-          title: "Ed's Autos",
-          subTitle: "Check out my full-stack project",
-          imgSrc: edsAutos,
-          link: "https://eds-autos-prod.herokuapp.com/",
-          selected: false,
-        },
-        {
-          id: 1,
-          title: "My GitHub",
-          subTitle: "Check out my code",
-          imgSrc: githubMark,
-          link: "https://github.com/MendozaEduardo",
-          selected: false,
-        },
-        {
-          id: 2,
-          title: "Storybook",
-          subTitle: "Check out this site's storybook",
-          imgSrc: storybookDoc,
-          link: "https://eds-style-guide.netlify.app",
-          selected: false,
-        },
-      ],
-    };
-  }
+export const Projects = () => {
+  const { items } = strings.projects;
 
-  handleCardClick = id => {
+  const handleCardClick = id => {
     let items = [...this.state.items];
 
     items[id].selected = items[id].selected ? false : true;
-
     items.forEach(item => {
       if (item.id !== id) {
         item.selected = false;
       }
     });
-
     this.setState({
       items,
     });
   };
 
-  useStyles = makeStyles(theme => ({
+  const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1,
     },
   }));
 
-  makeItems = items => {
+  const makeItems = items => {
     return items.map(item => {
       return (
         <Grid item={true} lg={2} md={12} sm={12}>
-          <Project item={item} click={e => this.handleCardClick(item.id, e)} key={item.id} />
+          <Project item={item} click={e => handleCardClick(item.id, e)} key={item.id} />
         </Grid>
       );
     });
   };
 
-  render() {
-    return (
-      <Grid
-        container={true}
-        wrap="wrap"
-        justify="center"
-        className={this.useStyles.root}
-        spacing={0}
-      >
-        {this.makeItems(this.state.items)}
-      </Grid>
-    );
-  }
-}
+  return (
+    <Grid container={true} wrap="wrap" justify="center" className={useStyles.root} spacing={0}>
+      {makeItems(items)}
+    </Grid>
+  );
+};

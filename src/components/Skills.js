@@ -10,7 +10,10 @@ import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
 import Grid from "@material-ui/core/Grid";
 import { Container } from "@material-ui/core";
 
+import strings from "../utilities/strings";
+
 export function Skills() {
+  const {title} = strings.skills
   return (
     <React.Fragment>
       <Grid
@@ -22,7 +25,7 @@ export function Skills() {
       >
         <Grid item md={4}>
           <h2>
-            <strong>What's in my Toolbox?</strong>
+            <strong>{title}</strong>
           </h2>
         </Grid>
       </Grid>
