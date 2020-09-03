@@ -13,7 +13,7 @@ import { Container } from "@material-ui/core";
 import strings from "../utilities/strings";
 
 export function Skills() {
-  const {title} = strings.skills
+  const { title, languages, librariesAndFrameworks, otherTools } = strings.skills;
   return (
     <React.Fragment>
       <Grid
@@ -33,6 +33,7 @@ export function Skills() {
         <Grid container direction="row">
           <Grid item lg={4} md={4} sm={8}>
             <List aria-label="Technical Skills">
+              {/* Start Heading of skill column */}
               <ListItem>
                 <ListItemIcon>
                   <CodeIcon />
@@ -40,21 +41,17 @@ export function Skills() {
                 <ListItemText primary="Programming Languages" />
               </ListItem>
               <Divider variant="middle" />
-              <ListItem>
-                <ListItemText>JavaScript</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>CSS</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>HTML</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>TypeScript</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>JSX</ListItemText>
-              </ListItem>
+              {/* End Heading of skill column */}
+
+              {/* Start skill */}
+              {languages.map(item => {
+                return (
+                  <ListItem>
+                    <ListItemText>{item}</ListItemText>
+                  </ListItem>
+                );
+              })}
+              {/* End skill */}
             </List>
           </Grid>
           <Divider />
@@ -68,26 +65,18 @@ export function Skills() {
                 <ListItemText primary="Libraries and Frameworks" />
               </ListItem>
               <Divider variant="middle" />
-              <ListItem>
-                <ListItemText>React.js</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>React Native</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Material-UI</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Bootstrap</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>react-spring</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Semantic UI</ListItemText>
-              </ListItem>
+              {/* Start skill */}
+              {librariesAndFrameworks.map(item => {
+                return (
+                  <ListItem>
+                    <ListItemText>{item}</ListItemText>
+                  </ListItem>
+                );
+              })}
+              {/* End skill */}
             </List>
           </Grid>
+
           <Grid item lg={4} md={4} sm={8}>
             <List aria-label="Technical Skills">
               <ListItem>
@@ -97,24 +86,15 @@ export function Skills() {
                 <ListItemText primary="Other Development Tools" />
               </ListItem>
               <Divider variant="middle" />
-              <ListItem>
-                <ListItemText>Node.js</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Express.js</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>MongoDB</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Figma</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Storybook</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>Github/Gitlab</ListItemText>
-              </ListItem>
+              {/* Start skill */}
+              {otherTools.map(item => {
+                return (
+                  <ListItem>
+                    <ListItemText>{item}</ListItemText>
+                  </ListItem>
+                );
+              })}
+              {/* End skill */}
             </List>
           </Grid>
         </Grid>

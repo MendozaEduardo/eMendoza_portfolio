@@ -1,10 +1,6 @@
 import edsAutos from "../assets/images/edsAutos.png";
 import githubMark from "../assets/images/githubMark.png";
 import storybookDoc from "../assets/images/storybookDoc.png";
-import BuildIcon from "@material-ui/icons/Build";
-import CodeIcon from "@material-ui/icons/Code";
-import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
-import { ListItemIcon } from "@material-ui/core";
 
 const strings = {
   navBar: {
@@ -56,30 +52,9 @@ const strings = {
   },
   skills: {
     title: "What's in my Toolbox?",
-    columns: [
-      {
-        title: "Programming Languages",
-        icon: CodeIcon,
-        items: ["Javascript", "CSS", "HTML", "Typescript", "JSX", "PHP"],
-      },
-      {
-        title: "Libraries and Frameworks",
-        icon: LibraryBooksIcon,
-        items: [
-          "React.js",
-          "React Native",
-          "Material-UI",
-          "Bootstrap",
-          "react-spring",
-          "Semantic UI",
-        ],
-      },
-      {
-        title: "Other Development Tools",
-        icon: BuildIcon,
-        items: ["Node.js", "Express.js", "MongoDB", "Figma", "Storybook", "Github/Gitlab"],
-      },
-    ],
+    languages: ["JavaScript", "CSS", "HTML", "SCSS", "TypeScript", "JSX", "PHP"],
+    librariesAndFrameworks: ["React", "Material-UI", "Bootstrap", "Semantic UI", "React-spring"],
+    otherTools: ["Node.js", "MongoDB", "GraphQL", "Figma", "Storybook", "Git"],
   },
 };
 
