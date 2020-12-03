@@ -1,5 +1,5 @@
 import edsAutos from "../assets/images/edsAutos.png";
-import githubMark from "../assets/images/githubMark.png";
+import doge from "../assets/images/doge.png";
 import storybookDoc from "../assets/images/storybookDoc.png";
 
 const strings = {
@@ -34,10 +34,10 @@ const strings = {
       },
       {
         id: 1,
-        title: "My GitHub",
-        subTitle: "Check out my code",
-        imgSrc: githubMark,
-        link: "https://github.com/MendozaEduardo",
+        title: "Paw-some Hex Game",
+        subTitle: "Test your hex color code knowledge!",
+        imgSrc: doge,
+        link: "https://pawsome-hex-game.netlify.app/",
         selected: false,
       },
       {
