@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 
+import { Title } from "../components/StyledComponents";
 import strings from "../utilities/strings";
 
 export const AboutMe = () => {
@@ -15,9 +16,8 @@ export const AboutMe = () => {
         alignItems="center"
       >
         <Grid item md={4}>
-          <h2>
-            <strong>{title}</strong>
-          </h2>
+          <Title title={title} />
+
           <h4>{subtitle}</h4>
         </Grid>
       </Grid>

@@ -9,8 +9,9 @@ import CodeIcon from "@material-ui/icons/Code";
 import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
 import Grid from "@material-ui/core/Grid";
 import { Container } from "@material-ui/core";
-
 import strings from "../utilities/strings";
+
+import { Title } from "../components/StyledComponents";
 
 export function Skills() {
   const { title, languages, librariesAndFrameworks, otherTools } = strings.skills;
@@ -23,78 +24,68 @@ export function Skills() {
         justify="space-around"
         alignItems="center"
       >
-        <Grid item md={4}>
-          <h2>
-            <strong>{title}</strong>
-          </h2>
-        </Grid>
+        <Title title={title} />
       </Grid>
       <Container className="skillsContainer" maxWidth="lg">
         <Grid container direction="row">
+          {/* Languages */}
           <Grid item lg={4} md={4} sm={8}>
+            <ListItem>
+              <ListItemIcon>
+                <CodeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Programming Languages" />
+            </ListItem>
+            <Divider variant="middle" />
             <List aria-label="Technical Skills">
-              {/* Start Heading of skill column */}
-              <ListItem>
-                <ListItemIcon>
-                  <CodeIcon />
-                </ListItemIcon>
-                <ListItemText primary="Programming Languages" />
-              </ListItem>
-              <Divider variant="middle" />
-              {/* End Heading of skill column */}
-
-              {/* Start skill */}
               {languages.map(item => {
                 return (
-                  <ListItem>
+                  <ListItem key={item.id}>
                     <ListItemText>{item}</ListItemText>
                   </ListItem>
                 );
               })}
-              {/* End skill */}
             </List>
           </Grid>
           <Divider />
 
+          {/* Libraries and Frameworks */}
           <Grid item lg={4} md={4} sm={8}>
+            <ListItem>
+              <ListItemIcon>
+                <LibraryBooksIcon />
+              </ListItemIcon>
+              <ListItemText primary="Libraries and Frameworks" />
+            </ListItem>
+            <Divider variant="middle" />
             <List aria-label="Technical Skills">
-              <ListItem>
-                <ListItemIcon>
-                  <LibraryBooksIcon />
-                </ListItemIcon>
-                <ListItemText primary="Libraries and Frameworks" />
-              </ListItem>
-              <Divider variant="middle" />
-              {/* Start skill */}
               {librariesAndFrameworks.map(item => {
                 return (
-                  <ListItem>
+                  <ListItem key={item.id}>
                     <ListItemText>{item}</ListItemText>
                   </ListItem>
                 );
               })}
-              {/* End skill */}
             </List>
           </Grid>
 
+          {/* Other tools */}
           <Grid item lg={4} md={4} sm={8}>
+            <ListItem>
+              <ListItemIcon>
+                <BuildIcon />
+              </ListItemIcon>
+              <ListItemText primary="Other Development Tools" />
+            </ListItem>
+            <Divider variant="middle" />
             <List aria-label="Technical Skills">
-              <ListItem>
-                <ListItemIcon>
-                  <BuildIcon />
-                </ListItemIcon>
-                <ListItemText primary="Other Development Tools" />
-              </ListItem>
-              <Divider variant="middle" />
-              {/* Start skill */}
               {otherTools.map(item => {
                 return (
-                  <ListItem>
+                  <ListItem key={item.id}>
                     <ListItemText>{item}</ListItemText>
                   </ListItem>
                 );
               })}
-              {/* End skill */}
             </List>
           </Grid>
         </Grid>

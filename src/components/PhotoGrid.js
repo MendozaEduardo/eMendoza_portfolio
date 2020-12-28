@@ -5,6 +5,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import Container from "@material-ui/core/Container";
 
+import {Title} from "../components/StyledComponents";
 import { tileData } from "../assets";
 import strings from "../utilities/strings";
 
@@ -20,7 +21,6 @@ const useStyles = makeStyles(theme => ({
   gridList: {
     width: 1000,
     height: 550,
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: "translateZ(0)",
   },
   titleBar: {
@@ -35,7 +35,7 @@ export function PhotoGrid() {
   const { title } = strings.photoGrid;
   return (
     <Container className={classes.root}>
-      <h1>{title}</h1>
+      <Title title={title} />
       <GridList cellHeight={500} spacing={1} className={classes.gridList}>
         {tileData.map(tile => (
           <GridListTile key={tile.img} cols={2} rows={1}>
