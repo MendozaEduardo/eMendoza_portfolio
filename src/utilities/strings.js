@@ -1,5 +1,11 @@
 import doge from "../assets/images/doge.png";
 import storybookDoc from "../assets/images/storybookDoc.png";
+import meatSmoker from "../assets/images/meatSmoker.png";
+import meatSmokerSmall from "../assets/images/meatSmokerSmall.png";
+import cMinistry from "../assets/images/cMinistry.png";
+import cMinistrySmall from "../assets/images/cMinistrySmall.png";
+import LHR from "../assets/images/LHR.png";
+import LHRSmall from "../assets/images/LHRSmall.png";
 
 const strings = {
   navBar: {
@@ -20,6 +26,32 @@ const strings = {
   },
   photoGrid: {
     title: "Some Snapshots into my Life",
+    photos: [
+      {
+        id: 0,
+        title: "College Mentor",
+        subtitle:
+          "I'm a volunteer staff at a college fellowship. I'm passionate about helping students navigate through the difficulties of college life, as well as helping them grow in their faith through helping plan activities, bible studies, etc. I've been involved in youth and elderly ministry and have gone on mission trips to places such as Thailand and Cambodia.",
+        img: cMinistry,
+        img2: cMinistrySmall,
+      },
+      {
+        id: 1,
+        title: "Griller and Meat Smoker",
+        subtitle:
+          "There's something special about grilling and smoking that you can't replicate on a stovetop. You can find me outside trying out different recipes.",
+        img: meatSmoker,
+        img2: meatSmokerSmall,
+      },
+      {
+        id: 2,
+        title: "Avid Runner",
+        subtitle:
+          "Call me crazy, but I think there's nothing more freeing than pushing myself during a nice run.",
+        img: LHR,
+        img2: LHRSmall,
+      },
+    ],
   },
   projects: [
     {

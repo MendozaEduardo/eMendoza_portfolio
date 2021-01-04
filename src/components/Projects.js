@@ -35,7 +35,7 @@ export const Projects = () => {
                 </Col>
                 <Col md={2} sm={12}>
                   <Fade duration={1000} delay={1000} distance="30px">
-                    <div className="project-wrapper__image">
+                    <div>
                       <a
                         href={project.link || "#!"}
                         target="_blank"
